@@ -1,22 +1,19 @@
 import { useState } from "react";
 import './styles.css';
-import {getListing, getID, getName, getBrand, getPrice, generatePDF} from "./help";
-import { createProps } from "./help";
-
+import {getListing, getID, getName, getBrand, getPrice, generatePDF, createInvoice} from "./help";
 
 function App() {
-const [data, setData] = useState("");
-const [id, setId] = useState("");
+const [listingData, setListingData] = useState("");
+const [listingLink, setListingLink] = useState("");
 
 const handleChange = (event) => {
-  setId(event.target.value);}
+  setListingLink(event.target.value);}
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    var idToQuery = getID(id)
-    getListing(idToQuery, setData); 
+    var id = getID(listingLink);
+    getListing(id, setListingData); 
 };
-
 
 return (
 <div>
@@ -27,13 +24,13 @@ return (
       <input
         type="text"
         name="id"
-        value={id}
+        value={listingLink}
         onChange={handleChange}
         required
       />
     </label>
     <button type="submit">Generate Invoice</button>
-    {data? generatePDF(createProps(getName(data), getPrice(data), getBrand(data))): <></>}
+    {listingData ? generatePDF(createInvoice(getName(listingData), getPrice(listingData), getBrand(listingData))): <></>}
   </form>
 </div>
 );

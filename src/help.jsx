@@ -50,12 +50,12 @@ export function getPrice(data){
     return price;
    }
 
-export function generatePDF(props){
-   jsPDFInvoiceTemplate(props);
+export function generatePDF(invoice){
+   jsPDFInvoiceTemplate(invoice);
 }
 
-export function createProps(name, price, brand){
-    var props = {
+export function createInvoice(name, price, brand){
+    var invoice = {
         outputType: OutputType.Save,
         returnJsPDFDocObject: true,
         fileName: `${name} Invoice`,
@@ -125,6 +125,6 @@ export function createProps(name, price, brand){
         pageLabel: "Page ",
     };
 
-    return props
+    return invoice
 }
    
