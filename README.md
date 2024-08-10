@@ -1,4 +1,4 @@
-## Repo setup
+## App Setup
 
 1. To clone the repo into a directory named `vite-project`, open a terminal window and run the following command
 
