@@ -86,7 +86,7 @@ export function createInvoice(name, price, brand){
         invoice: {
             label: "Invoice #: ",
             num: 1,
-            invDate: `Payment Date:${new Date().toLocaleDateString('en-US')}`,
+            invDate: `Invoice Date:${new Date().toLocaleDateString('en-US')}`,
             invGenDate: `Payment Date:${new Date().toLocaleDateString('en-US')}`,
             headerBorder: false,
             tableBodyBorder: false,
