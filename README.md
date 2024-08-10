@@ -10,12 +10,3 @@
 
 2. Install the prerequisite node packages by running `npm install`. You should see a `node_modules` directory get generated with the relevant node dependencies needed for the app to build for development.
 3. Run `npm run dev` to launch the app locally. By default, vite should run the app on `http://localhost:5173/`. If it is not running on that port, check your terminal output to see the port that it is running on.
-
-## React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
