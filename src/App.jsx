@@ -17,7 +17,7 @@ const handleSubmit = (event) => {
 
 return (
 <div>
-  <h1>Enter Listing Link</h1>
+  <h1>Enter Link to Generate Invoice for Desired Listing</h1>
   <hr />
   <form onSubmit={handleSubmit}>
     <label htmlFor="name">
@@ -29,7 +29,7 @@ return (
         required
       />
     </label>
-    <button type="submit">Generate Invoice</button>
+    <button type="submit">Get PDF</button>
     {listingData ? generatePDF(createInvoice(getName(listingData), getPrice(listingData), getBrand(listingData))): <></>}
   </form>
 </div>
